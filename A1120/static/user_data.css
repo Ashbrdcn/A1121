@@ -1,0 +1,107 @@
+
+body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    color: #1f2937;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.data-table {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background: #1f2937;
+    color: white;
+    font-weight: 500;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+.data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    color: #4b5563;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:hover {
+    background-color: #f9fafb;
+}
+
+.user-role {
+    background: #e5e7eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.user-role.admin {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.user-role.user {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.user-role.superadmin {
+    background-color: tomato;
+    color: yellow;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between; /* Align buttons horizontally */
+    gap: 0.5rem; /* Space between buttons */
+}
+
+.action-buttons button {
+    display: flex; /* To align icon and text */
+    align-items: center; /* Center icon vertically */
+    padding: 0.5rem 1rem; /* Add some padding */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.delete-btn {
+    background-color: red; /* Red background for delete */
+
+}
+
+.update-btn {
+    background-color: blue; /* Blue background for update */
+}
+
+.delete-btn:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+.update-btn:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}

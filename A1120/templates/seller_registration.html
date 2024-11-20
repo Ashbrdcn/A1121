@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Registration</title>
+  <!-- Link to the CSS File -->
+  <link rel="stylesheet" href="css.css">
+  <!-- Bootstrap CSS for general layout support -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom navbar styling */
+    .navbar {
+        height: 90px;
+    }
+    
+    .navbar-brand {
+      font-size: 1.25rem;    /* Slightly smaller brand text */
+      padding: 0;
+    }
+    
+    .navbar .nav-link {
+      padding: 0.5rem 1rem !important;  /* Reduced padding around links */
+      font-size: 1rem;     /* Slightly smaller text */
+    }
+    
+    .navbar .btn {
+      padding: 0.25rem 1rem;  /* Smaller padding for button */
+      font-size: 1rem;      /* Smaller text for button */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <strong>eCom</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('user_page') }}">Home</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Registration Form -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card card-horizontal">
+          <div class="card-header text-center bg-dark text-white">
+            <h4>Seller Registration</h4>
+          </div>
+          <div class="card-body">
+            <form action="{{ url_for('seller_registration') }}" method="POST">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- First Name -->
+                  <div class="form-group mb-3">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                  </div>
+                  <!-- Last Name -->
+                  <div class="form-group mb-3">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                  </div>
+                  <!-- Email -->
+                  <div class="form-group mb-3">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                  </div>
+                  <!-- Phone Number -->
+                  <div class="form-group mb-3">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <!-- Address -->
+                  <div class="form-group mb-3">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address" required>
+                  </div>
+                  <!-- Postal Code -->
+                  <div class="form-group mb-3">
+                    <label for="postalCode">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="Enter your postal code" required>
+                  </div>
+                  <!-- Business Name -->
+                  <div class="form-group mb-3">
+                    <label for="businessName">Business Name</label>
+                    <input type="text" class="form-control" id="businessName" name="businessName" placeholder="Enter your business name" required>
+                  </div>
+                  <!-- Description -->
+                  <div class="form-group mb-3">
+                    <label for="description">Description / Business Overview</label>
+                    <textarea class="form-control" id="description" name="description" placeholder="Describe your business" rows="4" required></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- Submit Button -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-dark w-50">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

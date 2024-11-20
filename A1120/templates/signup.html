@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}" />
+</head>
+<body>
+    <section class="signup-page">
+        <div class="container-fluid signup-container">
+            <div class="row h-100">
+                <div class="col-lg-6 left-panel">
+                    <h1 class="headline-text">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+                </div>
+
+                <div class="col-lg-6 right-panel">
+                    <div class="signup-form">
+                        {% with messages = get_flashed_messages(with_categories=True) %}
+                            {% if messages %}
+                                {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+
+                        <form method="POST" action="{{ url_for('signup') }}">
+                            <h2 class="signup-title">Sign Up</h2>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required />
+                            </div>
+
+                            <button type="submit" class="btn btn-dark w-100" id="signup_btn">Sign Up</button>
+
+                            <div class="account-creation-link">
+                                <span>Already have an account?</span>
+                                <a href="{{ url_for('login') }}" class="text-create-account">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

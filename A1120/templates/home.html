@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LuxCloths | Landing</title>
+        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome (for icons) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/static/home.css">
+    
+        <!-- jQuery (for Bootstrap 4 only) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    </head>
+    
+<body>
+
+    <!-- Navbar Section from the First Code -->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-white"> <!-- Navbar background set to white -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">LuxBuys</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Best Sellers</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Versace</a></li>
+                                <li><a class="dropdown-item" href="#">Zara</a></li>
+                                <li><a class="dropdown-item" href="#">Gucci</a></li>
+                                <li><a class="dropdown-item" href="#">Prada</a></li>
+                                <li><a class="dropdown-item" href="#">Calvin Klein</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Account Icon</a></li>
+                    </ul>
+                </d
+            </div>
+        </nav>
+    </section>
+        
+    
+
+    <!-- Hero Section -->
+    <section class="container-fluid-1">
+        <div class="row align-items-center">
+            <!-- Content Section -->
+            <div class="col-lg-6 col-md-12 content">
+                <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+                <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+                <a href="#" id="shopNowButton" class="btn">Shop Now</a>
+            </div>
+            <!-- Image Section -->
+            <div class="col-lg-6 col-md-12 text-center">
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product">
+        <hr>
+        <h3 class="text-wrapper-7" id="versace">Versace</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="image" src="/static/images/Versace Greco Collar Cotton.png" alt="Greco Collar Cotton" />
+                <p class="t-SHIRT-WITH-TAPE">T-SHIRT WITH TAPE DETAILS</p>
+                <div class="text-wrapper-10">$120</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/Men's Luxury and Designer Shirts.png" alt="Men's Luxury and Designer Shirts" />
+                <p class="SKINNY-FIT-JEANS">SKINNY FIT JEANS</p>
+                <div class="text-wrapper-10">$130</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/Men's Designer Jacket.png" alt="Men's Designer Jacket" />
+                <p class="CHECKERED-SHIRT">CHECKERED SHIRT</p>
+                <div class="text-wrapper-10">$240</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/COTTON CREW-NECK SWEATER - Light Blue.png" alt="COTTON CREW-NECK SWEATER - Light Blue" />
+                <p class="SLEEVE-STRIPED-t">SLEEVE STRIPED T-SHIRT</p>
+                <div class="text-wrapper-10">$180</div>
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-wrapper-7" id="zara">Zara</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="image" src="/static/images/zara 1.png" alt="Light Blue Jacket" />
+                <p class="t-SHIRT-WITH-TAPE">T-SHIRT WITH TAPE DETAILS</p>
+                <div class="text-wrapper-10">$120</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/zara2.png" alt="Pink Checkered" />
+                <p class="SKINNY-FIT-JEANS">SKINNY FIT JEANS</p>
+                <div class="text-wrapper-10">$130</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/zara3.png" alt="Zara Sweater" />
+                <p class="CHECKERED-SHIRT">CHECKERED SHIRT</p>
+                <div class="text-wrapper-10">$240</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/zara4.png" alt="Collection Harry Lambert" />
+                <p class="SLEEVE-STRIPED-t">SLEEVE STRIPED T-SHIRT</p>
+                <div class="text-wrapper-10">$180</div>
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-wrapper-7" id="Gucci">Gucci</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="image" src="/static/images/gucci1.png" alt="GUCCI Cotton piquet polo" />
+                <p class="t-SHIRT-WITH-TAPE">T-SHIRT WITH TAPE DETAILS</p>
+                <div class="text-wrapper-10">$120</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/gucci2.png" alt="Jacquard Cotton Sweater" />
+                <p class="SKINNY-FIT-JEANS">SKINNY FIT JEANS</p>
+                <div class="text-wrapper-10">$130</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/gucci3.png" alt="Patch cotton-wool sweatshirt" />
+                <p class="CHECKERED-SHIRT">CHECKERED SHIRT</p>
+                <div class="text-wrapper-10">$240</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/gucci4.png" alt="Men's Designer Knitwear" />
+                <p class="SLEEVE-STRIPED-t">SLEEVE STRIPED T-SHIRT</p>
+                <div class="text-wrapper-10">$180</div>
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-wrapper-7" id="prada">Prada</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="image" src="/static/images/prada1.png" alt="PRADA United Kingdom Official" />
+                <p class="t-SHIRT-WITH-TAPE">T-SHIRT WITH TAPE DETAILS</p>
+                <div class="text-wrapper-10">$120</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/prada2.png" alt="Prada Silk Polo Shirt" />
+                <p class="SKINNY-FIT-JEANS">SKINNY FIT JEANS</p>
+                <div class="text-wrapper-10">$130</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/prada3.png" alt="Prada Polo Shirt" />
+                <p class="CHECKERED-SHIRT">CHECKERED SHIRT</p>
+                <div class="text-wrapper-10">$240</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/prada4.png" alt="Men's Ready To Wear Luxury Clothing" />
+                <p class="SLEEVE-STRIPED-t">SLEEVE STRIPED T-SHIRT</p>
+                <div class="text-wrapper-10">$180</div>
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-wrapper-7" id="calvin-klein">Calvin Klein</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="image" src="/static/images/ck1.png" alt="Calvin Klein Short Sleeve Woven Stretch Shirt" />
+                <p class="t-SHIRT-WITH-TAPE">T-SHIRT WITH TAPE DETAILS</p>
+                <div class="text-wrapper-10">$120</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/ck2.png" alt="Merino Zip Cardigan" />
+                <p class="SKINNY-FIT-JEANS">SKINNY FIT JEANS</p>
+                <div class="text-wrapper-10">$130</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/ck3.png" alt="Mens Calvin Klein Essential Slim T-Shirt" />
+                <p class="CHECKERED-SHIRT">CHECKERED SHIRT</p>
+                <div class="text-wrapper-10">$240</div>
+            </div>
+            <div class="col-md-3">
+                <img class="image" src="/static/images/ck4.png" alt="Calvin Klein Men's Welt Zip Polo Shirt Black" />
+                <p class="SLEEVE-STRIPED-t">SLEEVE STRIPED T-SHIRT</p>
+                <div class="text-wrapper-10">$180</div>
+            </div>
+        </div>
+        
+        <!-- More brands sections as in the original second code -->
+    </section>  
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybGOB2a7r64lpU9PXJpV9ZZcKA7YHo2B5PbCTtB5lWPGSowM5" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QpDWzqxT1nT9NQF5F23Tc8JoMiOUj0kkjpOQH9tJlbcCpsKZXkJgV9voLJDtvQUu" crossorigin="anonymous"></script>    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Data</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/sidebarAdminSide.css">
+</head>
+<body>
+    {% include 'sidebarAdminSide.html' %}
+
+    <div id="main" class="container mt-4">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <h2 class="mb-4">Seller Data</h2>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Business Name</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Postal Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for seller in sellers %}
+                    <tr>
+                        <td>{{ seller.id }}</td>
+                        <td>{{ seller.business_name }}</td>
+                        <td>{{ seller.first_name }} {{ seller.last_name }}</td>
+                        <td>{{ seller.email }}</td>
+                        <td>{{ seller.phone_number }}</td>
+                        <td>{{ seller.address }}</td>
+                        <td>{{ seller.postal_code }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>

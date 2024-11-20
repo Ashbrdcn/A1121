@@ -1,0 +1,20 @@
+<!-- templates/notifications.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications</title>
+</head>
+<body>
+    <h1>Your Notifications</h1>
+    {% if notifications %}
+        <ul>
+            {% for notification in notifications %}
+                <li>{{ notification.message }} - {{ notification.created_at }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No new notifications.</p>
+    {% endif %}
+</body>
+</html>

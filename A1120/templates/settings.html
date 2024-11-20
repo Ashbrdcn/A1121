@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='super_page.css') }}">
+  <style>
+    /* Main content style */
+    #content {
+      transition: margin-left 0.3s; /* Smooth transition */
+      padding: 20px;
+    }
+
+    /* Sidebar style */
+    #mySidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    #mySidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    #mySidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    /* Style for the burger icon and text beside it */
+    #menuToggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      transition: 0.3s; /* Smooth transition for the text to move */
+      z-index: 2; /* Make sure it's above the sidebar */
+    }
+
+    #menuToggle span {
+      font-size: 30px;
+      margin-right: 20px; /* Space between icon and text */
+    }
+
+    #menuText {
+      font-size: 18px;
+      color: #111; /* Color of the text next to the burger icon */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Include -->
+  {% include 'sidebar_super.html' %}
+
+  <!-- Page Content -->
+  <div id="content">
+    <h1></h1>
+    <p></p>
+  </div>
+
+  <!-- Burger Icon with Text -->
+  <div id="menuToggle" onclick="openNav()">
+    <span>&#9776;</span>
+    <span id="menuText">Settings</span> <!-- Text beside the burger icon -->
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("content").style.marginLeft = "250px";  /* Shift the content */
+      document.getElementById("menuToggle").style.left = "250px"; /* Move the text along with the sidebar */
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("content").style.marginLeft = "0";  /* Remove the margin */
+      document.getElementById("menuToggle").style.left = "20px"; /* Reset the position to original */
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+
+</body>
+</html>

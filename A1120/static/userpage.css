@@ -1,0 +1,261 @@
+#nav-bar .navbar {
+    display: flex;              /* Enable flexbox on the navbar */
+    justify-content: space-between; /* Space between items */
+    align-items: center;        /* Center items vertically */
+  }
+  
+  #nav-bar .navbar-collapse {
+    text-align: center;         /* Center text when collapsed */
+    width: 100%;                /* Make sure it takes the full width */
+  }
+  
+  #nav-bar .navbar-collapse .nav-item {
+    width: 100%;
+    font-family: sans-serif;         
+  }
+  
+  #nav-bar .navbar-toggler {
+    border: none;               /* Remove border from toggler */
+  }
+  
+  @media (max-width: 992px) {
+    /* Additional adjustments for smaller screens */
+    #nav-bar .navbar-collapse {
+        background-color: white; /* Ensure it matches the navbar */
+        position: absolute;       /* Make sure it overlaps correctly */
+        left: 0;
+        right: 0;
+        top: 56px;               /* Adjust based on your navbar height */
+        z-index: 1000;           /* Ensure it appears above other content */
+        width: 100%;             /* Full width when expanded */
+    }
+  }
+  
+  .nav-link:hover {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    min-width: 160px;
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .dropdown-menu .dropdown-item {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #e3e3e3;
+    color: black;
+  }
+  
+  /* Navbar Toggler */
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+  }
+  
+  .navbar-brand {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 30px;
+    margin-right: 20px;
+    color: black;
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    color: black;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-nav {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler.collapsed .fa-bars {
+    transition: transform 1s ease-in-out;
+  }
+  
+  .navbar-toggler:not(.collapsed) .fa-bars {
+    transform: rotate(90deg);
+  }
+  
+  /* General reset for body */
+  body {
+    font-family: 'DM Serif Text', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Search bar styling */
+  .input-group {
+    max-width: 300px;
+    flex: 1;
+  }
+  
+  .input-group input {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .input-group button {
+    border: 1px solid #ddd;
+    border-left: none;
+    padding: 5px 10px;
+    border-radius: 0 4px 4px 0;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Hero section styling */
+  .container-fluid-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    width: 100%; /* Change this to 100% */
+    max-width: 1200px;
+  }
+  
+  .container-fluid-1 .content h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+  
+  .container-fluid-1 .content p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .container-fluid-1 .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .container-fluid-1 .btn:hover {
+    background-color: #333;
+  }
+  
+  .feature-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Product section styling */
+  .product {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+  }
+  
+  .product h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-family: 'DM Serif Text', serif;
+  }
+  
+  .product .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .product .col-md-3 {
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .product .image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product .text-wrapper-10 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    #nav-bar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+  
+    .nav-link {
+        margin-right: 0; /* Remove right margin for links */
+        padding: 10px 0; /* Add vertical padding for better spacing */
+    }
+  
+    .input-group {
+        width: 100%; /* Full width for input group */
+        max-width: none; /* Remove max-width on smaller screens */
+    }
+    
+    .navbar-toggler {
+        margin-left: auto; /* Align toggler to the right */
+    }
+  }
+  
+  p {
+    font-family: sans-serif;
+  }
+  .btn {
+    font-family: sans-serif;
+  }
+  
+  .image {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+  }
+  
+  .col-md-3 {
+    border: #000 0.5px solid;
+    border-radius: 10px;
+  }
